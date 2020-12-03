@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. This change
 ## [Unreleased]
 ### Changed
 - Updated changelog
+- Updated Readme with a warning about spoilers.
 
 ## [0.1.2] - 2020-12-02
 ### Added

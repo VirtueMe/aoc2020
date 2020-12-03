@@ -2,6 +2,8 @@
 
 A Clojure library designed to solve Advent of Code 2020
 
+**WARNING:** The code contains spoilers. Continue at your own risk.
+
 ## Usage
 
 FIXME
