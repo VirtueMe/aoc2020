@@ -13,7 +13,7 @@
 (def records
   (map #(create-record %) input))
   
-(deftest split-input
+(deftest split-input-test
   (testing "Check that it splits up the word correct"
     (is (= (split-words (first input) #": ") ["1-3 a" "abcde"]))))
     

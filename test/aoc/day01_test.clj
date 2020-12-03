@@ -7,6 +7,7 @@
 (def tres [979 366 675])
 
 (def input [1721 979 366 299 675 1456])
+
 (deftest find-numbers-test
   (testing "Should return correct tuple from array"
     (is (= (find-numbers input goal) tuple))))
