@@ -1,7 +1,7 @@
 (ns aoc.day02-test
   (:require [clojure.test :refer [deftest testing is]]
             [aoc.core :refer [split-words]]
-            [aoc.day02 :refer [create-record validate-01 validate-02 validate-count]]))
+            [aoc.day02 :refer [create-password-policy validate-policy-01 validate-policy-02 policy-validated-count]]))
 
 (def input
   [
@@ -11,7 +11,7 @@
   ])
   
 (def records
-  (map #(create-record %) input))
+  (map create-password-policy input))
   
 (deftest split-input-test
   (testing "Check that it splits up the word correct"
@@ -19,17 +19,17 @@
     
 (deftest create-record-test
   (testing "Should create record from string"
-    (is (= (create-record (first input)) { :min 1 :max 3 :letter \a :password "abcde" }))))
+    (is (= (create-password-policy (first input)) { :min 1 :max 3 :letter \a :password "abcde" }))))
     
 (deftest validate-01-test 
   (testing "Should validate password"
-    (is (= (validate-01 (create-record (first input))) true))))
+    (is (= (validate-policy-01 (create-password-policy (first input))) true))))
     
 (deftest validate-02-test 
   (testing "Should validate password"
-    (is (= (validate-02 (create-record (first input))) true))))
+    (is (= (validate-policy-02 (create-password-policy (first input))) true))))
       
 (deftest validate-count-test 
   (testing "Should find count of validated passwords"
-    (is (= (validate-count records) 2))))
+    (is (= (policy-validated-count records) 2))))
     

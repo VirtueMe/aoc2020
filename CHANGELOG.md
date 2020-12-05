@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
+## [0.1.5] - 2020-12-04
+### Added
+- Added solution for day 05 part 1
+- Added solution for day 05 part 2
+- Added comments to all namespaces and functions to follow the puzzles and make it easier to understand.
+
+### Changed
+- Changed names of function to better tell what they are doing.
+- Updated changelog.
+
 ## [0.1.4] - 2020-12-04
 ### Added
 - Added solution for day 04 part 1

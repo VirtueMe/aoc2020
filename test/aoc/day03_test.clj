@@ -1,6 +1,6 @@
 (ns aoc.day03-test
   (:require [clojure.test :refer [deftest testing is]]
-            [aoc.day03 :refer [check-position check-positions move count-hits count-all-hits default-step steps]]))
+            [aoc.day03 :refer [check-position check-positions move part-1 part-2 default-step steps]]))
 
 (def pattern
   [
@@ -49,24 +49,24 @@
     
 (deftest count-hits-default-test
   (testing "Should return the correct number of hits"
-    (is (= (count-hits pattern) 7))))
+    (is (= (part-1 pattern) 7))))
     
 (deftest count-hits-alternative-test
   (testing "Should return the correct number of hits"
-    (is (= (count-hits pattern (first steps)) 2))))
+    (is (= (part-1 pattern (first steps)) 2))))
     
 (deftest count-hits-line-2-test
   (testing "Should return the correct number of hits"
-    (is (= (count-hits pattern [1 5]) 3))))
+    (is (= (part-1 pattern [1 5]) 3))))
         
 (deftest count-hits-line-3-test
   (testing "Should return the correct number of hits"
-    (is (= (count-hits pattern [1 7]) 4))))
+    (is (= (part-1 pattern [1 7]) 4))))
       
 (deftest count-hits-line-4-test
   (testing "Should return the correct number of hits"
-    (is (= (count-hits pattern [2 1]) 2))))
+    (is (= (part-1 pattern [2 1]) 2))))
 
 (deftest count-all-hits-default-test
   (testing "Should return the correct number of all hits"
-    (is (= (count-all-hits pattern steps) 336))))
+    (is (= (part-2 pattern steps) 336))))

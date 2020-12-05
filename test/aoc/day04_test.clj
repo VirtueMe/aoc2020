@@ -1,6 +1,6 @@
 (ns aoc.day04-test
   (:require [clojure.test :refer [deftest testing is]]
-            [aoc.day04 :refer [creator create-passport validate-passport count-valid-passports get-valid-passports count-valid-rules-passports]]))
+            [aoc.day04 :refer [passport-parser create-passport validate-passport count-valid-passports get-valid-passports count-valid-rules-passports]]))
 
 (def passportSource
   [
@@ -19,11 +19,11 @@
     "iyr:2011 ecl:brn hgt:59in"
   ])
   
-(def passports (map create-passport (creator passportSource)))
+(def passports (map create-passport (passport-parser passportSource)))
   
 (deftest can-create-passports-test
   (testing "can create all passports without errror"
-    (is (= (count (map create-passport (creator passportSource))))) 4))
+    (is (= (count (map create-passport (passport-parser passportSource))))) 4))
   
 (deftest validate-valid-passport-testing
   (testing "should validate a valid passport"
@@ -39,4 +39,4 @@
 
 (deftest count-valid-rules-passports-test
   (testing "should invalidate a invalid passport"
-    (is (= (count-valid-rules-passports (get-valid-passports passports)) 1))))
+    (is (= (count-valid-rules-passports (get-valid-passports passports)) 2))))
