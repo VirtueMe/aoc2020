@@ -33,12 +33,22 @@
   (let [list (frequencies (map #(validator %) records))]
     (list true))))
 
-(defn solve-02-1
-  []
-  (let [sum (validate-count input)]
-    sum))
+(defn part-1
+  ([]
+    (part-1 input))
+  ([input]
+    (validate-count input)))
 
-(defn solve-02-2
-  []
-  (let [sum (validate-count input validate-02)]
-    sum))
+(defn part-2
+  ([]
+    (part-2 input))
+  ([input]
+    (validate-count input validate-02)))
+    
+(defn solve
+  ([]
+    (solve part-1))
+  ([part]
+    (solve part input))
+  ([part input]
+    (part input)))

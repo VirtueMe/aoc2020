@@ -69,4 +69,4 @@
 
 (deftest count-all-hits-default-test
   (testing "Should return the correct number of all hits"
-    (is (= (count-all-hits steps pattern) 336))))
+    (is (= (count-all-hits pattern steps) 336))))

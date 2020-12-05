@@ -1,7 +1,13 @@
 (ns aoc.core
   (:require [clojure.java.io :refer [reader]]
-            [clojure.string :refer [split]]))
+            [clojure.string :refer [split join]]))
 
+(defn join-words
+  ([input]
+    (join-words input #" "))
+  ([input delimiter]
+    (join delimiter input)))
+    
 (defn split-letters
   ([str]
     (split-letters str #""))

@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [aoc.core :refer [get-lines]]))
   
-(def input01 (vec (map #(Integer. %) (get-lines "resources/01.txt"))))
+(def input (vec (map #(Integer. %) (get-lines "resources/01.txt"))))
 
 (def goal 2020)
 
@@ -30,17 +30,22 @@
   [input]
   (apply * input))
   
-(defn solve-01
-  [input]
-  (let [sum (sum-numbers (find-numbers input goal))]
-    sum))
-  
-(defn solve-01-1
-  []
-  (let [sum (sum-numbers (find-numbers input01 goal))]
-    sum))
-    
-(defn solve-01-2
-  []
-  (let [sum (sum-numbers (find-numbers-advanced input01 goal))]
-    sum))
+(defn part-1
+  ([]
+    (part-1 input))
+  ([input]
+    (sum-numbers (find-numbers input goal))))
+
+(defn part-2
+  ([]
+    (part-2 input))
+  ([input]
+    (sum-numbers (find-numbers-advanced input goal))))
+
+(defn solve
+  ([]
+    (solve part-1))
+  ([part]
+    (solve part input))
+  ([part input]
+    (part input)))
