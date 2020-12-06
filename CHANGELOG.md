@@ -3,7 +3,12 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
-## [0.1.5] - 2020-12-04
+## [0.1.6] - 2020-12-06
+### Added
+- Added solution for day 06 part 1
+- Added solution for day 06 part 2
+
+## [0.1.5] - 2020-12-05
 ### Added
 - Added solution for day 05 part 1
 - Added solution for day 05 part 2
